@@ -39,10 +39,10 @@ gulp.task('upload', function(callback) {
 
 gulp.task('deploy', function(callback) {
   return runSequence(
-//    ['clean'],
     ['js', 'node-mods'],
     ['zip'],
     ['upload'],
+    ['clean'],
     callback
   );
 });
